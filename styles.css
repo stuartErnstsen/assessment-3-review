@@ -61,6 +61,7 @@ img {
 	align-items: center;
 	overflow: hidden;
 	transition: all 1s;
+	height: 100px;
 }
 
 #nav-profile.hide-nav {
@@ -97,7 +98,7 @@ img {
 
 header {
 	border: 2px solid red;
-	height: calc(100vh - 100px);
+	height: calc(100vh - 119px);
 	display: flex;
 }
 
