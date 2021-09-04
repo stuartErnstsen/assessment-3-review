@@ -1,5 +1,5 @@
 
-const bts = document.querySelectorAll('button')
+const bts = document.querySelectorAll('.title-button')
 
 const myFavs = {
     color: 'blue',
@@ -34,16 +34,16 @@ bts.forEach((button) => {
 
 
 
-//The code below will toggle class to show/hide nav bar
-// const nav = document.getElementById('nav-profile')
-// const toggleBtn = document.getElementById('toggle-nav-button')
+// The code below will toggle class to show / hide nav bar
+const nav = document.getElementById('nav-profile')
+const toggleBtn = document.getElementById('toggle-nav-button')
 
 
-// function toggleNav() {
-//     nav.classList.toggle('hide-nav')
-// }
+function toggleNav() {
+    nav.classList.toggle('hide-nav')
+}
 
-// toggleBtn.addEventListener('click', toggleNav)
+toggleBtn.addEventListener('click', toggleNav)
 
 
 
@@ -57,8 +57,10 @@ const randomBtn = document.getElementById('random-button')
 
 function goToRandomRestaurant() {
     const num = Math.floor(Math.random() * list.length);
-    //The line below will redirect to a new page. 
-    window.location.href = list[num]
+    //The line below will redirect current page to new page
+    // window.location.href = list[num]
+    //This line will open the link in a new tab
+    window.open(list[num], '_blank')
 }
 
-toggleBtn.addEventListener('click', goToRandomRestaurant)
+randomBtn.addEventListener('click', goToRandomRestaurant)
